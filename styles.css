@@ -8,13 +8,16 @@ img {
   width: 200px;
   border-radius: 50%;
   filter: brightness(50%);
+  transition: filter 0.3s ease-in-out;
 }
-h1, h2, h3, p, ul, li {
-  color: #f2f2f2;
+img:hover {
+  filter: brightness(100%);
+  cursor: pointer;
 }
 header {
   background-color: #444;
   padding: 1rem;
+  transition: background-color 0.5s ease-in-out;
 }
 section {
   padding: 1rem;
@@ -29,4 +32,17 @@ figcaption {
   margin-top: 1rem;
   width: 80%;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+h1, h2, h3, p, ul, li {
+  color: #f2f2f2;
+  animation: fadeIn 1s ease-in-out;
+}
+#hidden-content {
+    display: none;
+}
+#hidden-content:target {
+    display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
