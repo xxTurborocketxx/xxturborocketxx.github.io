@@ -7,10 +7,6 @@
   <body>
     <header>
       <h1>My Profile</h1>
-      <select id="language-select">
-        <option value="english">English</option>
-        <option value="german">German</option>
-      </select>
     </header>
     <main>
         <section id="about">
@@ -28,11 +24,11 @@
                 <p id="recovery-desc">OrangeFox Recovery is a custom recovery based on TWRP that offers a number of additional features and improvements. To download OrangeFox Recovery join my <a href="https://t.me/S20FEOrangeFox">Telegram group.</a>
               </li>
               <li>
-                <h3 id="rom-text">ProjectX custom ROM for the Galaxy S20 FE</h3>
+                <h3>ProjectX custom ROM for the Galaxy S20 FE</h3>
                 <figure>
                   <img src="placeholder.jpg" alt="ProjectX custom ROM">
                 </figure>
-                <p id="rom-desc">ProjectX is a custom ROM based on OneUI that offers a number of additional features and improvements. It is designed specifically for the Galaxy S20 FE and offers stability and performance enhancements. It also includes many customization options that allows users to personalize their devices. Find more information and download ProjectX <a href="https://projectsxrom.com">here</a>.</p>
+                <p>ProjectX is a custom ROM based on OneUI that offers a number of additional features and improvements. It is designed specifically for the Galaxy S20 FE and offers stability, security, and performance enhancements. It also includes many customization options that allows users to personalize their devices. Find more information and download ProjectX custom ROM <a href="https://projectxrom.com">here</a>.</p>
               </li>
             </ul>
           </section>
@@ -40,41 +36,5 @@
     <footer>
         <p>Copyright &copy; 2023 TurboRCT</p>
     </footer>
-    <script>
-    const language = {
-        english: {
-            about: "About Me",
-            projects: "Projects",
-            recovery: "OrangeFox Recovery for the Galaxy S20 FE",
-            recoveryDesc: "OrangeFox Recovery is a custom recovery based on TWRP that offers a number of additional features and improvements. To download OrangeFox Recovery join my Telegram group.",
-            rom: "ProjectX custom ROM for the Galaxy S20 FE",
-            romDesc: "ProjectX is a custom ROM based on OneUI that offers a number of additional features and improvements. It is designed specifically for the Galaxy S20 FE and offers stability and performance enhancements. It also includes many customization options that allows users to personalize their devices. Find more information and download ProjectX here."
-        },
-        german: {
-            about: "Über Mich",
-            projects: "Projekte",
-            recovery: "OrangeFox Recovery für das Galaxy S20 FE",
-            recoveryDesc: "OrangeFox Recovery ist ein benutzerdefiniertes Recovery-System, das auf TWRP basiert und eine Reihe von zusätzlichen Funktionen und Verbesserungen bietet. Um OrangeFox Recovery herunterzuladen, tritt meiner Telegram-Gruppe bei.",
-            rom: "ProjectX benutzerdefinierte ROM für das Galaxy S20 FE",
-            romDesc: "ProjectX ist eine benutzerdefinierte ROM, die auf OneUI basiert und eine Reihe von zusätzlichen Funktionen und Verbesserungen bietet. Es ist speziell für das Galaxy S20 FE entwickelt und bietet Stabilität und Leistungsverbesserungen. Es enthält auch viele Anpassungsoptionen, mit denen Benutzer ihre Geräte personalisieren können. Weitere Informationen und Download von ProjectX hier."
-        }
-    };
-
-    function updateText(lang) {
-        document.getElementById("about-text").innerHTML = language[lang].about;
-        document.getElementById("about-desc").innerHTML = language[lang].aboutDesc;
-        document.getElementById("projects-text").innerHTML = language[lang].projects;
-        document.getElementById("recovery-text").innerHTML = language[lang].recovery;
-        document.getElementById("recovery-desc").innerHTML = language[lang].recoveryDesc;
-        document.getElementById("rom-text").innerHTML = language[lang].rom;
-        document.getElementById("rom-desc").innerHTML = language[lang].romDesc;
-    }
-
-    const select = document.getElementById("language-select");
-    select.addEventListener("change", function() {
-        updateText(this.value);
-    });
-    updateText("english");
-    </script>
   </body>
 </html>
