@@ -1,1 +1,1 @@
-This is the website for TurboUI ROM for the SAmsung Galaxy S20FE
+This is the website for TurboUI ROM for the Samsung Galaxy S20FE
