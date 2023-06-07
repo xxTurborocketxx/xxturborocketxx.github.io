@@ -1,48 +1,386 @@
+/* Global Styles */
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  text-align: center;
-  color: #f2f2f2;
-  background-color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
 }
-img {
-  width: 200px;
-  border-radius: 50%;
-  filter: brightness(50%);
-  transition: filter 0.3s ease-in-out;
+
+h1,
+h2,
+h3 {
+    margin: 0;
 }
-img:hover {
-  filter: brightness(100%);
-  cursor: pointer;
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+
 header {
-  background-color: #444;
-  padding: 1rem;
-  transition: background-color 0.5s ease-in-out;
+    background-color: #111111;
 }
-section {
-  padding: 1rem;
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
-figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
-figcaption {
-  margin-top: 1rem;
-  width: 80%;
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
 }
-h1, h2, h3, p, ul, li {
-  color: #f2f2f2;
-  animation: fadeIn 1s ease-in-out;
+
+.toggle-container {
+    display: flex;
+    align-items: center;
 }
-#hidden-content {
-    display: none;
+
+.toggle-label {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #4d4d4d;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
 }
-#hidden-content:target {
-    display: block;
+
+.toggle-label:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
+
+.toggle:checked + .toggle-label:before {
+    transform: translateX(20px);
+}
+
+/* Hero Section */
+
+#hero {
+    background-image: url("hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-content {
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #9f35e5;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #580092;
+}
+
+/* Features Section */
+
+#features {
+    background-color: #333333;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#features h2 {
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background-color: #4d4d4d;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Installation Section */
+
+#installation {
+    padding: 80px 0;
+}
+
+#installation h2 {
+    margin-bottom: 40px;
+}
+
+#installation ol {
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#installation ol li {
+    margin-bottom: 10px;
+}
+
+/* Downloads Section */
+
+#downloads {
+    background-color: #333333;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#downloads h2 {
+    margin-bottom: 40px;
+}
+
+#downloads ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#downloads li {
+    margin: 10px;
+}
+
+#downloads a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #9f35e5;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#downloads a:hover {
+    background-color: #580092;
+}
+
+/* FAQ Section */
+
+#faq {
+    padding: 80px 0;
+    background-color: #333333;
+}
+
+#faq h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #4d4d4d;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+
+#contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #111111;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Smooth Animations */
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-links li {
+        margin-left: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .feature-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+    }
+
+    #installation ol {
+        font-size: 14px;
+    }
+
+    #downloads a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #faq h2 {
+        font-size: 24px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
 }
