@@ -1,1 +1,1 @@
-This is my small personal website
+This is the website for TurboUI ROM for the SAmsung Galaxy S20FE
